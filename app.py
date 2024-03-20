@@ -113,7 +113,7 @@ app.layout = html.Div([
 
 # Every function must have its own callback operator...but must it really?
 @callback(
-    Output('indicator_graph', 'figure', allow_duplicate=True),   # Outputs
+    Output('indicator_graph', 'figure'),   # Outputs
     Input('country_dropdown', 'value'),   # Dropdown input 
     Input('range_slider', 'value'),   # Slider input 
     #prevent_initial_call=True)   # May not need this, but fixed an error at one point 
