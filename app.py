@@ -42,7 +42,7 @@ import pandas as pd
 from dash import Dash, dcc, html, Input, Output, callback
 import plotly.graph_objs as go
 from warnings import simplefilter
-simplefilter(action="ignore", category=pd.errors.PerformanceWarning)
+#simplefilter(action="ignore", category=pd.errors.PerformanceWarning)
 
 # Use pandas to read in data
 # make sure to have the file in the same directory (e.g., folder) as the notebook
@@ -116,8 +116,8 @@ app.layout = html.Div([
     Output('indicator_graph', 'figure', allow_duplicate=True),   # Outputs
     Input('country_dropdown', 'value'),   # Dropdown input 
     Input('range_slider', 'value'),   # Slider input 
-    prevent_initial_call=True)   # May not need this, but fixed an error at one point 
-
+    #prevent_initial_call=True)   # May not need this, but fixed an error at one point 
+)
 
 def update_graph(selected_country, year_range):   # update graph function 
 
